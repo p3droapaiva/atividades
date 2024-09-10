@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+   Scanner resposta = new Scanner(System.in);
+    double plano1;
+    double plano11;
+    double plano2;
+    double plano22;
+    double calculo1;
+    double calculo2;
+    double calculo3;
+    double calculo4;
+    double calculo5;
+    double calculo6;
+    
+    System.out.println("informe os valores de X1");
+    plano1 = resposta.nextDouble();
+    System.out.println("informe os valores de Y1");
+    plano11 = resposta.nextDouble();
+    System.out.println("informe os valores de X2");
+    plano2 = resposta.nextDouble();
+    System.out.println("informe os valores de Y2");
+    plano22 = resposta.nextDouble();
+    
+    calculo1 = plano1 - plano2;
+    calculo2 = plano11 - plano22;
+    calculo3 = calculo1 * calculo1;
+    calculo4 = calculo2 * calculo2;
+    calculo5 = calculo3 + calculo4;
+    calculo6 = Math.sqrt (calculo5);
+    
+    System.out.println("A distancia entre os planos é igual a: " + calculo6);
+    
+      
+    
+  }
+}
