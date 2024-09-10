@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+    double temp1;
+    double temp2;
+    double calculo1;
+    double calculo2;
+    double calculo3;
+    Scanner entrada = new Scanner(System.in);
+    
+    System.out.println("Informe a temperatura em Fahrenheit para que o software a converta em Celcius: ");
+    temp1 = entrada.nextDouble();
+    
+    calculo1 = temp1 - 32;
+    calculo2= calculo1 / 9;  
+    calculo3= calculo2 * 5;
+    
+    System.out.println("A temperatura informada é igual a " + calculo3 + " graus celcius");
+    
+    
+    
+    
+    
+    
+  }
+}
