@@ -1,0 +1,30 @@
+import java.util.Scanner;
+  
+class main {
+  public static void main(String[] args) {
+    
+ double valorEtanol;
+ double valorGasolina;
+  double calculo1;
+    double calculo2;
+    Scanner resposta = new Scanner(System.in);
+    
+    System.out.println("Qual o valor do etanol");
+    valorEtanol = resposta.nextDouble();
+    
+    System.out.println("Qual o valor da gasolina");
+    valorGasolina = resposta.nextDouble();
+    
+   calculo1 = valorEtanol * 100 / valorGasolina;
+    
+    
+    if (calculo1 < 70) { 
+      System.out.println("O alcool é mais interessante");}
+    
+    else {System.out.println("A gasolina é mais interessante");
+    
+    
+  
+    }
+  }
+}
