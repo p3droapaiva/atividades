@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+ class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Lendo o valor de horas e minutos
+        System.out.print("Digite a hora (HH): ");
+        int horas = scanner.nextInt();
+
+        System.out.print("Digite os minutos (MM): ");
+        int minutos = scanner.nextInt();
+
+        // Calculando quantos minutos se passaram desde 00:00
+        int minutosPassados = (horas * 60) + minutos;
+
+        // Exibindo o resultado
+        System.out.printf("Se passaram %d minutos desde o início do dia (00:00).\n", minutosPassados);
+
+        scanner.close();
+    }
+}
