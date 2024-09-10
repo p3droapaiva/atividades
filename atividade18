@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+    Scanner resposta = new Scanner(System.in);
+    double idade;
+   
+    System.out.println("Informe sua idade: ");
+    idade = resposta.nextDouble();
+    
+   if (idade == 16 && idade == 17 && idade >=70 ) {
+      System.out.println("Eleitor facultativo "); }
+     else if (idade >= 18 && idade < 70) 
+       System.out.println("Voto obrigatório");
+    else if (idade < 16) 
+      System.out.println("Não tem a idade necessaria para votar");
+      
+  }
+}
