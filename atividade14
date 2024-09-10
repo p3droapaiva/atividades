@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+ Scanner resposta = new Scanner(System.in);
+    double peso;
+    double calculo1;
+    
+    
+    System.out.println("Informe o seu peso: ");
+    peso = resposta.nextDouble();
+     
+    //0.035 ml em litro
+    calculo1= peso * 0.035;
+    
+    System.out.println("Você deve beber " + calculo1 + " litros de água por dia.");
+    
+    
+    
+    
+  }
+}
