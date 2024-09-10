@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+    Scanner resposta = new Scanner(System.in);
+    double nota1;
+    double nota2;
+    double nota3;
+    double media;
+    
+    System.out.println("Digite a nota da primeira prova: ");
+    nota1 = resposta.nextDouble();
+    System.out.println("Digite a nota da segunda prova: ");
+    nota2 = resposta.nextDouble();
+    System.out.println("Digite a nota da terceira prova: ");
+    nota3 = resposta.nextDouble();
+    
+    media = (nota1+nota2+nota3)/3;
+    
+    if (media<7) {
+      System.out.println("O aluno foi reprovado pois sua média foi igual a " + media );
+    } else {
+      System.out.println("Parabéns você foi aprovado sua média foi igual a " + media);
+    }
+    
+    
+    
+    
+  }
+}
