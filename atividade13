@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+    Scanner resposta = new Scanner(System.in);
+    double valor;
+    double metros;
+    double total;;
+    
+    System.out.println("Qual o valor do metro quadrado da ceramica: ");
+    valor = resposta.nextDouble();
+    System.out.println("Quantos metros de ceramica você ira adquirir: ");
+    metros = resposta.nextDouble();
+    
+    total = valor * metros;
+    
+    System.out.println("O valor total a ser pago é igual " + total + " reais");
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  }
+}
