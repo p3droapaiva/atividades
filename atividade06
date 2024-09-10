@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+    Integer a;
+    Integer b;
+    Scanner resposta = new Scanner(System.in);
+    
+    System.out.println("Digite o valor A");
+    a = resposta.nextInt();
+    System.out.println("Digite o valor B");
+    b = resposta.nextInt();
+    
+    a = b;
+    b = a;
+    
+    System.out.println("O primeiro valor digitado foi:"+ a +" o segundo valor digitado foi:"+ b);
+    
+    
+    
+    
+    
+    
+    
+    
+  }
+}
