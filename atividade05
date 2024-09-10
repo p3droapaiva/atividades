@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+   double hora;
+   double tempo;
+   double desconto;
+   double calculo1; 
+   double calculo2;
+   double calculo3;
+   
+   Scanner resposta = new Scanner(System.in);
+    
+    System.out.println("Informe o valor da sua hora trabalhada: ");
+    hora = resposta.nextDouble();
+    System.out.println("Informe o numero de horas trabalhadas por mês:");
+    tempo = resposta.nextDouble();
+    System.out.println("Informe o percentual de desconto do INSS sobre seu salario:");
+    desconto = resposta.nextDouble();
+    
+   
+    calculo1 = hora * tempo;
+    calculo2 = calculo1* desconto / 100;
+    calculo3 = calculo1 - calculo2 ;
+    
+    System.out.println("O seu salario no final do mês: " + calculo3);
+    
+    
+    
+    
+    
+    
+    
+  }
+}
