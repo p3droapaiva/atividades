@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+    double canetas;
+    double nota;
+    double troco;
+    double calculo1;
+    double calculo2;
+    Scanner entrada = new Scanner(System.in);
+    
+    System.out.println("Quantas canetas foram compradas? ");
+    canetas = entrada.nextDouble();
+    System.out.println("Qual foi O valor da nota do pagamento? ");
+    nota = entrada.nextDouble();
+    System.out.println("Qual foi o valor troco? ");
+    troco = entrada.nextDouble();
+    
+    calculo1 = nota - troco;
+    calculo2 = calculo1 / canetas;
+    
+    System.out.println("O valor de cada caneta é igual a: " + calculo2);
+    
+    
+    
+    
+    
+    
+  }
+}
