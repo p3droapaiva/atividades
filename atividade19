@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+ class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double saldo = 1000.00; // saldo inicial
+        String extrato = "";    // armazenará as informações de depósito/saque
+        int opcao;
+
+        do {
+            System.out.println("\n--- MENU CAIXA ELETRÔNICO ---");
+            System.out.println("1. Exibir saldo");
+            System.out.println("2. Exibir extrato");
+            System.out.println("3. Realizar depósito");
+            System.out.println("4. Realizar saque");
+            System.out.println("5. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    // Exibir saldo
+                    System.out.printf("Seu saldo atual é: R$ %.2f\n", saldo);
+                    break;
+                case 2:
+                    // Exibir extrato
+                    if (extrato.isEmpty()) {
+                        System.out.println("Nenhuma movimentação foi realizada.");
+                    } else {
+                        System.out.println("Extrato das movimentações:");
+                        System.out.println(extrato);
+                    }
+                    break;
+                case 3:
+                    // Realizar depósito
+                    System.out.print("Digite o valor do depósito: R$ ");
+                    double deposito = scanner.nextDouble();
+                    if (deposito > 0) {
+                        saldo += deposito;
+                        extrato += String.format("Depósito: R$ %.2f\n", deposito);
+                        System.out.printf("Depósito de R$ %.2f realizado com sucesso!\n", deposito);
+                    } else {
+                        System.out.println("Valor inválido. O depósito deve ser maior que zero.");
+                    }
+                    break;
+                case 4:
+                    // Realizar saque
+                    System.out.print("Digite o valor do saque: R$ ");
+                    double saque = scanner.nextDouble();
+                    if (saque > 0 && saque <= saldo) {
+                        saldo -= saque;
+                        extrato += String.format("Saque: R$ %.2f\n", saque);
+                        System.out.printf("Saque de R$ %.2f realizado com sucesso!\n", saque);
+                    } else if (saque > saldo) {
+                        System.out.println("Saldo insuficiente para o saque.");
+                    } else {
+                        System.out.println("Valor inválido. O saque deve ser maior que zero.");
+                    }
+                    break;
+                case 5:
+                    // Sair
+                    System.out.println("Saindo... Obrigado por usar o Caixa Eletrônico!");
+                    break;
+                default:
+                    // Opção inválida
+                    System.out.println("Erro: Opção inválida! Saindo do programa.");
+                    opcao = 5; // Força a saída do programa
+                    break;
+            }
+        } while (opcao != 5);
+
+        scanner.close();
+    }
+}
