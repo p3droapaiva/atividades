@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class main {
+  public static void main(String[] args) {
+    
+    Scanner resposta = new Scanner(System.in);
+    double larguraArea;
+    double comprimentoArea;
+    double larguraCeramica;
+    double comprimentoCeramica;
+    double areaTotal;
+    double areaCeramica;
+    double quantidadeCeramica;
+    double quantidadeCeramicaComAcabamento;
+    int quantidadeCeramicaFinal;
+    
+    System.out.print("Informe a largura da área a ser revestida (em metros): ");
+    larguraArea = resposta.nextDouble();
+    
+    System.out.print("Informe o comprimento da área a ser revestida (em metros): ");
+    comprimentoArea = resposta.nextDouble();
+    
+    System.out.print("Informe a largura da cerâmica (em metros): ");
+    larguraCeramica = resposta.nextDouble();
+    
+    System.out.print("Informe o comprimento da cerâmica (em metros): ");
+     comprimentoCeramica = resposta.nextDouble();
+    
+    areaTotal = larguraArea * comprimentoArea;
+    areaCeramica = larguraCeramica * comprimentoCeramica;
+    
+    quantidadeCeramica = areaTotal / areaCeramica;
+    quantidadeCeramicaComAcabamento = quantidadeCeramica * 1.10;
+    quantidadeCeramicaFinal = (int) Math.ceil(quantidadeCeramicaComAcabamento);
+    
+    
+     System.out.printf("\nÁrea a ser revestida: %.2f m²\n", areaTotal);
+        System.out.printf("Área de uma peça de cerâmica: %.2f m²\n", areaCeramica);
+        System.out.printf("Quantidade de cerâmica necessária (sem acabamento): %.2f peças\n", quantidadeCeramica);
+        System.out.printf("Quantidade de cerâmica necessária (com acabamento): %d peças\n", quantidadeCeramicaFinal);
+    
+  }
+}
